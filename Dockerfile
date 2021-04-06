@@ -5,7 +5,7 @@ FROM ubuntu:20.04
 COPY entrypoint.sh /entrypoint.sh
 COPY American-shorthair-cat-scaled.jpg /American-shorthair-cat-scaled.jpg
 
-RUN apt-get update && apt-get install imagemagick
+RUN apt-get update && apt-get install -y imagemagick
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
