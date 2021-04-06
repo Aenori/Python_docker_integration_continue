@@ -1,8 +1,11 @@
 # Container image that runs your code
-FROM alpine:3.10
+FROM ubuntu:20.04
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
+COPY American-shorthair-cat-scaled.jpg /American-shorthair-cat-scaled.jpg
+
+RUN apt-get update && apt-get install imagemagick
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
