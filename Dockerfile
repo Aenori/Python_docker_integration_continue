@@ -9,4 +9,3 @@ RUN apt-get update && apt-get install imagemagick
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
-
